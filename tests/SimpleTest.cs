@@ -11,5 +11,12 @@ namespace Tests
             Assert.Equal(3*3, 9);
         }
 
+        [Fact]
+        public void TestSum()
+        {
+            Assert.Equal(2+2, 4);
+            Assert.Equal(3+3, 6);
+        }
+
     }
 }
