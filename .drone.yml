@@ -8,5 +8,4 @@ build:
     - dnx test
 
 cache:
-  mount:
-    - /root/.dnx
+  - /root/.dnx
