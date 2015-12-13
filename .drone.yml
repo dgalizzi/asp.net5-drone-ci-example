@@ -6,6 +6,7 @@ build:
     - ls /opt
     - which dnx
     - which dnu
+    - apt-get install -qqy tree
     - tree
     - dnu restore
     - dnx test
