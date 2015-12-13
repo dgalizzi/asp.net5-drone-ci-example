@@ -4,8 +4,12 @@ build:
     - ls
     - ls $DNX_USER_HOME
     - ls /opt
+    - which dnx
+    - which dnu
+    - tree
     - dnu restore
     - dnx test
 
 cache:
-  - /root/.dnx
+  mount:
+    - /root/.dnx
