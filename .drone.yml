@@ -3,9 +3,10 @@ build:
   commands:
     - ls
     - ls $DNX_USER_HOME
+    - ls /opt
     - dnu restore
     - dnx test
 
 cache:
   mount:
-    - $DNX_USER_HOME
+    - /opt
