@@ -1,13 +1,7 @@
 build:
   image: microsoft/aspnet:1.0.0-rc1-update1-coreclr
   commands:
-    - ls
-    - ls $DNX_USER_HOME
-    - ls /opt
-    - which dnx
-    - which dnu
     - if [ -d "nuget_cache" ]; then mv nuget_cache /root/.dnx ; fi
-    - rm -rf nuget_cache
     - dnu restore
     - dnx test
     - mv /root/.dnx nuget_cache
