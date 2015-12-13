@@ -16,7 +16,7 @@ namespace Tests
         {
             Assert.Equal(2+2, 4);
             Assert.Equal(3+3, 6);
-            Assert.Equal(1+1, 1);
+            Assert.Equal(1+1, 2);
         }
 
     }
