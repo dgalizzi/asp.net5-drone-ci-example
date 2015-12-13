@@ -1,6 +1,5 @@
 build:
-  image: golang
+  image: microsoft/aspnet:1.0.0-rc1-update1-coreclr
   commands:
-    - go get
-    - go build
-    - go test
+    - ls
+    - dnx test
