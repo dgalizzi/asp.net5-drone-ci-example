@@ -6,11 +6,14 @@ build:
     - ls /opt
     - which dnx
     - which dnu
+    - mv nuget_cache /root/.dnx
+    - rm -rf nuget_cache
     - dnu restore
     - dnx test
+    - mv /root/.dnx nuget_cache
     - ls /opt
     - ls /root/.dnx
 
 cache:
   mount:
-    - /root/.dnx
+    - nuget_cache
