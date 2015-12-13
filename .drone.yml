@@ -6,7 +6,7 @@ build:
     - ls /opt
     - which dnx
     - which dnu
-    - mv nuget_cache /root/.dnx
+    - if [ -d "nuget_cache" ]; then mv nuget_cache /root/.dnx fi
     - rm -rf nuget_cache
     - dnu restore
     - dnx test
