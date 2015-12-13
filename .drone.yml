@@ -1,8 +1,11 @@
-image: microsoft/aspnet:1.0.0-rc1-update1-coreclr
-script:
-  - ls
-  - ls $DNX_USER_HOME
-  - dnu restore
-  - dnx test
+build:
+  image: microsoft/aspnet:1.0.0-rc1-update1-coreclr
+  commands:
+    - ls
+    - ls $DNX_USER_HOME
+    - dnu restore
+    - dnx test
+
 cache:
-  - $DNX_USER_HOME
+  mount:
+    - $DNX_USER_HOME
