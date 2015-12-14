@@ -9,3 +9,4 @@ build:
 cache:
   mount:
     - nuget_cache
+    - project.lock.json
