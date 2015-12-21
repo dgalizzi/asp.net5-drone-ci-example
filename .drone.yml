@@ -3,8 +3,9 @@ build:
   environment:
     - DNX_PACKAGES=$PWD/nuget_cache
   commands:
+    - env
     - mkdir -p nuget_cache
-    - dnu restore --packages nuget_cache
+    - dnu restore
     - dnx test
 
 cache:
