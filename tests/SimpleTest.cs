@@ -1,23 +1,24 @@
 using Xunit;
 
-namespace Tests
+namespace MyFirstDnxUnitTests
 {
-    public class SimpleTest
+    public class Class1
     {
         [Fact]
-        public void Test()
+        public void PassingTest()
         {
-            Assert.Equal(2*2, 4);
-            Assert.Equal(3*3, 9);
+            Assert.Equal(4, Add(2, 2));
         }
 
         [Fact]
-        public void TestSum()
+        public void FailingTest()
         {
-            Assert.Equal(2+2, 4);
-            Assert.Equal(3+3, 6);
-            Assert.Equal(1+1, 2);
+            Assert.Equal(5, Add(2, 2));
         }
 
+        int Add(int x, int y)
+        {
+            return x + y;
+        }
     }
 }
