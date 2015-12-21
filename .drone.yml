@@ -1,7 +1,7 @@
 build:
   image: microsoft/aspnet:1.0.0-rc1-update1-coreclr
   environment:
-    - DNX_PACKAGES=nuget_cache
+    - DNX_PACKAGES=$PWD/nuget_cache
   commands:
     - mkdir -p nuget_cache
     - dnu restore --packages nuget_cache
