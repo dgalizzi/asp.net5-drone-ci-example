@@ -9,5 +9,5 @@ build:
 
 cache:
   mount:
-    - nuget_cache
+    - /drone/nuget_cache
     - project.lock.json
