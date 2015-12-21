@@ -1,10 +1,9 @@
 build:
   image: microsoft/aspnet:1.0.0-rc1-update1-coreclr
   commands:
-    - if [ -d "nuget_cache" ]; then mv nuget_cache /root/.dnx ; fi
-    - dnu restore
+    - mkdir -p nuget_cache
+    - dnu restore --packages nuget_cache
     - dnx test
-    - mv /root/.dnx nuget_cache
 
 cache:
   mount:
