@@ -3,7 +3,6 @@ build:
   environment:
     - DNX_PACKAGES=/drone/nuget_cache
   commands:
-    - mkdir -p /drone/nuget_cache
     - dnu restore
     - dnx test
 
