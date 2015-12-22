@@ -1,12 +1,12 @@
 build:
   image: microsoft/aspnet:1.0.0-rc1-update1-coreclr
   environment:
-    - DNX_PACKAGES=/drone/n_cache
+    - DNX_PACKAGES=/drone/nuget_cache
   commands:
     - dnu restore
     - dnx test
 
 cache:
   mount:
-    - /drone/n_cache
+    - /drone/nuget_cache
     - project.lock.json
